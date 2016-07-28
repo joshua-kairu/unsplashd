@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+
+ Unsplashd
+
+ Simple Unsplash picture viewer
+
+ Copyright (C) 2016 Kairu Joshua Wambugu
+
+ This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
+
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see http://www.gnu.org/licenses/.
+
+ -->
+
+<!-- layout for showing the main photo grid -->
+
+<FrameLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity"
+
+    >
+
+    <!-- progress bar to show loading -->
+
+    <!-- indeterminateTintMode - The blending mode used to apply the indeterminate progress indicator tint -->
+
+    <ProgressBar
+
+        android:id="@android:id/empty"
+
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+
+        android:layout_gravity="center"
+
+        android:indeterminate="true"
+
+        android:indeterminateTint="@color/colorPlaceholder"
+
+        android:indeterminateTintMode="src_in"
+
+        />
+
+    <!-- recycler to hold the photos -->
+
+    <!--
+
+    clipToPadding - If the ViewGroup will clip its children and resize (but not clip) any
+    EdgeEffect to its padding, if padding is not zero.
+
+    scrollbars - which scrollbars should be displayed on scrolling
+
+    scrollbarStyle -  scrollbar style and position
+         inset, add to the padding of the view.
+         inside, scrollbars drawn inside the padding area
+         outside, scrollbars drawn on the edge of the view.
+
+    -->
+
+    <android.support.v7.widget.RecyclerView
+
+        android:id="@+id/am_rv_image_grid"
+
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+
+        android:padding="@dimen/grid_item_spacing"
+
+        android:clipToPadding="false"
+
+        android:scrollbars="vertical"
+
+        android:scrollbarStyle="outsideOverlay"
+
+        />
+
+</FrameLayout>
